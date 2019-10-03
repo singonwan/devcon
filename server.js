@@ -3,11 +3,14 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-//connect to db
+// connect to db
 connectDB();
 
+// init middleware
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) => {
-  res.send("API running");
+    res.send("API running");
 });
 
 const PORT = process.env.PORT || 5000;
@@ -19,5 +22,5 @@ app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/posts", require("./routes/api/posts"));
 
 app.listen(PORT, () => {
-  console.log(`listening to port ${PORT}`);
+    console.log(`listening to port ${PORT}`);
 });
