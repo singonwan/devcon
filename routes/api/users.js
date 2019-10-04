@@ -3,6 +3,8 @@ const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 const User = require('../../models/Users');
 
 // @route   POST api/users
@@ -60,7 +62,21 @@ router.post(
 
             await user.save();
             // return JWT
-            res.send('User Registered');
+            const payload = {
+                user: {
+                    id: user.id //note: mongoose abstracts mongos _id to id
+                }
+            };
+
+            jwt.sign(
+                payload,
+                config.get('jwtSecret'),
+                { expiresIn: 360000 }, // change back to 3600 in production
+                (err, token) => {
+                    if (err) throw err;
+                    res.json({ token }); //give 200 response by default if not specified with .status
+                }
+            );
         } catch (err) {
             console.error(err.message);
             res.status(500).send('Server Error');
