@@ -1,34 +1,35 @@
 {
-  "name": "devcon",
-  "version": "1.0.0",
-  "description": "social network for devs",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server",
-    "server": "nodemon server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/singonwan/devcon.git"
-  },
-  "author": "me",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/singonwan/devcon/issues"
-  },
-  "homepage": "https://github.com/singonwan/devcon#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.2.2",
-    "express": "^4.17.1",
-    "express-validator": "^6.2.0",
-    "gravatar": "^1.8.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.3",
-    "request": "^2.88.0"
-  },
-  "devDependencies": {
-    "concurrently": "^4.1.2",
-    "nodemon": "^1.19.3"
-  }
+    "name": "devcon",
+    "version": "1.0.0",
+    "description": "social network for devs",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server",
+        "server": "nodemon server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/singonwan/devcon.git"
+    },
+    "author": "me",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/singonwan/devcon/issues"
+    },
+    "homepage": "https://github.com/singonwan/devcon#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "config": "^3.2.2",
+        "express": "^4.17.1",
+        "express-validator": "^6.2.0",
+        "gravatar": "^1.8.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.7.3",
+        "request": "^2.88.0",
+        "mem": ">=4.0.0"
+    },
+    "devDependencies": {
+        "concurrently": "^4.1.2",
+        "nodemon": "^1.19.3"
+    }
 }
