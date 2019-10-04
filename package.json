@@ -25,11 +25,11 @@
         "gravatar": "^1.8.0",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.7.3",
-        "request": "^2.88.0",
-        "mem": ">=4.0.0"
+        "request": "^2.88.0"
     },
     "devDependencies": {
         "concurrently": "^4.1.2",
-        "nodemon": "^1.19.3"
+        "nodemon": "^1.19.3",
+        "mem": ">=4.0.0"
     }
 }
