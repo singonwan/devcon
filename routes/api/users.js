@@ -13,6 +13,7 @@ const User = require('../../models/Users');
 router.post(
     '/',
     [
+        //using the check middleware
         check('name', 'Name is a Required field')
             .not()
             .isEmpty(),
