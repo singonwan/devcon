@@ -37,5 +37,5 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://localhost:5000/" //random bug that requires this / at the end on MAC
+    "proxy": "http://localhost:5000/"
 }
