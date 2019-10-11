@@ -41,11 +41,16 @@ router.post(
                 });
             }
             // get users gravatar
-            const avatar = gravatar.url(email, {
-                s: '200',
-                r: 'pg',
-                d: 'mp'
-            });
+            // dunno why it isn't sending the https:// over
+            const avatar = gravatar.url(
+                email,
+                {
+                    s: '200',
+                    r: 'pg',
+                    d: 'mp'
+                },
+                true
+            );
 
             user = new User({
                 name,
