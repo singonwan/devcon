@@ -7,6 +7,8 @@ import { getProfileById } from '../../actions/profile';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
+import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
 
 const Profile = ({
     match,
@@ -53,6 +55,25 @@ const Profile = ({
                                 <h4>No Prior Experiences</h4>
                             )}
                         </div>
+
+                        <div className="profile-edu bg-white p-2">
+                            <h2 className="text-primary">Education</h2>
+                            {profile.education.length > 0 ? (
+                                <Fragment>
+                                    {profile.education.map(edu => (
+                                        <ProfileEducation
+                                            key={edu._id}
+                                            education={edu}
+                                        />
+                                    ))}
+                                </Fragment>
+                            ) : (
+                                <h4>No Prior Education</h4>
+                            )}
+                        </div>
+                        {profile.githubusername && (
+                            <ProfileGithub username={profile.githubusername} />
+                        )}
                     </div>
                 </Fragment>
             )}
