@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://gwan123:gwan123@devconnect-o4loc.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "gwanssecrettoken",
+    "githubClientId": "76c5e5b89a3e65ebc3fd",
+    "githubSecret": "a24ba4d2554a9b23ad94608c97e1d9daf5b9e724"
+}
